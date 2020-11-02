@@ -1,0 +1,553 @@
+101 Справочник договоров (GET_DICT_AGREEMENTS)
+
+"AGREEMENT":{
+             "ID": "",
+             "NAME": "",
+             "NUMBER": "",
+             "TYPE": "",
+             "DATE_BEGIN": "",
+             "DATE_END": "",
+             "CONTRAGENT_ID": "",
+             "INSTANCE_CODE": "",
+            }
+
+
+запрос 
+{
+  "ID": "",
+  "NAME": "",
+  "NUMBER": "",
+  "CONTRAGENT_ID": "",
+  "CONTRAGENT_NAME": "",
+  "CONTRAGENT_INN": "",
+  "TYPE": "",
+  "INSTANCE_CODE": "",
+  "SEARCH_STRING": "",
+  "COUNT": ""
+}
+
+SEARCH_STRING - ??
+
+
+ответ
+
+{
+"COUNT": ""
+"ROWS" :[ "AGREEMENT":{"AGREEMENT"} ]
+}
+
+
+102 Справочник компонент (GET_DICT_INSTANCES)
+
+"INSTANCE":{
+            "ID": "",
+            "CODE": "",
+            "NAME": "",
+            "TYPE": "",
+            "DESCRIPTION": ""
+           }
+
+{
+  "CODE": "",
+  "NAME": "",
+  "COUNT": ""
+}
+
+{
+"COUNT": ""
+"ROWS" :[ "INSTANCE":{"INSTANCE"} ]
+}
+
+
+
+103 Каналы финансирования (GET_DICT_PAYMENT_TYPES)
+
+"PAYMENT_TYPE":{
+                "ID": "",
+                "CODE": "",
+                "NAME": ""
+               }
+
+{
+  "NAME": "",
+  "CODE": "",
+  "COUNT": ""
+}
+
+{
+"COUNT": ""
+"ROWS" :[ "PAYMENT_TYPE":{"PAYMENT_TYPE"} ]
+}
+  
+
+104 Источники Финансирования (GET_MARGINAL_INCOME)
+
+"MARGINAL_INCOME":{
+                   "ID": "",
+                   "CODE": "",
+                   "NAME": ""
+                  }
+
+{
+  "CODE": "",
+  "NAME": "",
+  "COUNT": ""
+}
+
+{
+"COUNT": ""
+"ROWS" :[ "MARGINAL_INCOME":{"MARGINAL_INCOME"} ]
+}
+
+105 Справочник услуг (GET_DICT_SERVICES)
+
+"SERVICE":{
+           "ID": "",
+           "CODE": "",
+           "NAME": "",
+           "STYPE": "",
+           "STYPE_NAME": "",
+           "TTYPE": "",
+           "COST": "",
+           "COST_PERSON": "",
+           "DESCRIPTION": "",
+           "PREPARATION": "",
+           "DURATION": "",
+           "TIMETABLE": "",
+           "TAGS": "",
+           "REGISTRY_REQUIREMENT": "",
+           "INSTANCE_CODE": "",
+          }
+
+{
+  "ID": "",
+  "CODE": "",
+  "NAME": "",
+  "STYPE": "",
+  "PERSON_ID": "",
+  "CHART_ID": "",
+  "INSTANCE_CODE": "",
+  "COUNT": ""
+}
+
+{
+"COUNT": ""
+"ROWS" :[ "SERVICE":{"SERVICE"} ]
+}
+
+
+106 Справочник МКБ10 (GET_DICT_MKB10)
+
+"MKB10":{
+         "ID": "",
+         "PARENT_ID": "",
+         "NAME": "",
+         "CODE": "",
+        }
+
+{
+  "ID": "",
+  "NAME": "",
+  "CODE": "",
+  "COUNT": ""
+}
+
+{
+"COUNT": ""
+"ROWS" :[ "MKB10":{"MKB10"} ]
+}
+
+
+
+107 Стандарты (GET_DICT_STANDARDS)
+
+"STANDART":{
+            "ID": "",
+            "CODE": "",
+            "TYPE": "",
+            "NAME": "",
+            "DESCRIPTION": ""
+            "DEPARTMENTS": [{"DEPARTMENT_ID": ""}],
+            "DOCTORS": [{"DOCTOR_ID": ""}],
+            "MKB10S": [{"MKB10_ID": ""}],
+            "SERVICES": [{"SERVICE_ID": "", "COUNT": ""}],
+           }
+
+
+{
+  "ID": "",
+  "DEPARTMENT_ID": "",
+  "STANDARD_CODE": "",
+  "STANDARD_NAME": "",
+  "MKB_CODE": "",
+  "PERSON_ID": "",
+  "CHART_ID": "",
+  "COUNT": ""
+}
+
+
+{
+"COUNT": ""
+"ROWS" :[ "STANDART":{"STANDART"} ]
+}
+
+
+108 Оргструктура больницы (GET_DICT_DEPARTMENTS)
+
+"DEPARTMENT":{
+              "ID": "",
+              "PARENT_ID": "",
+              "CODE": "",
+              "NAME": "",
+              "SHORTNAME": "",
+              "TYPE": "",
+              "INSTANCE_CODE": "",
+              "APPOINTS": [{"APPOINT": ""}],
+             }
+
+
+
+{
+  "ID": "",
+  "PARENT_ID": "",
+  "CODE": "",
+  "NAME": "",
+  "SHORTNAME": "",
+  "TYPE": "",
+  "INSTANCE_CODE": "",
+  "COUNT": ""
+}
+
+
+{
+"COUNT": ""
+"ROWS" :[ "DEPARTMENT":{"DEPARTMENT"} ]
+}
+
+
+
+109 Врачи отделений (GET_DICT_DOCTORS)
+
+"DOCTOR":{
+          "ID": "",
+          "DEGREE": "",
+          "INSTANCE_CODE": "",
+          "PERSON": {"PERSON"},
+          "APPOINT": {"APPOINT"},
+          "SPECIALITY": {"SPECIALITY"},
+          "DEPARTMENT": {"DEPARTMENT"},
+         }
+
+
+в запросе вообще не понятно что !
+{
+  "ID": "",
+  "DEPARTMENT_ID": "",
+  "CODE": "",
+  "NAME": "",
+  "INSTANCE_CODE": "",
+  "COUNT": ""
+}
+
+{
+"COUNT": ""
+"ROWS" :[ "DOCTOR":{"DOCTOR"} ]
+}
+
+
+110 Должности врачей (GET_DICT_APPOINTS)
+
+
+"APPOINT":{
+           "ID": "",
+           "NAME": "",
+          }
+
+{
+  "ID": "",
+  "NAME": "",
+  "COUNT": ""
+}
+
+
+{
+  "COUNT": ""
+  "ROWS" : [ "APPOINT": {"APPOINT"} ]
+}
+
+111 Получить список ролей пользователей МИС (GET_DICT_ROLES)
+
+"ROLE":{
+        "ID": "",
+        "NAME": "",
+        "CODE": ""
+       }
+
+{
+  "NAME": "",
+  "CODE": "",
+  "ROWNUM": ""
+}
+
+{
+  "COUNT": ""
+  "ROWS" : [ "ROLE": {"ROLE"} ]
+}
+
+112 Получить список пользователей (GET_DICT_USERS)
+
+"USER":{
+        "ID": "",
+        "CODE": "",
+        "FULLNAME": "",
+        "SSO_LOGIN": "",
+        "ROLES": [
+                "ROLE":{
+                        "NAME": "",
+                        "CODE": ""
+                       }
+                 ],
+        "GROUPS": [
+                       {
+                        "NAME": "",
+                        "CODE": ""
+                       }
+                  ],
+        "DOCTORS": [{"DOCTOR"}]
+       }
+
+{
+  "CODE": "",
+  "NAME": "",
+  "SSO_LOGIN": "",
+  "ROLE": "",
+  "GROUP": "",
+  "ROWNUM": "",
+}
+
+{
+  "COUNT": ""
+  "ROWS" : [ "USER": {"USER"} ]
+}
+
+
+113 Штатная расстановка (GET_SHT_RASST)
+
+"STAFF":{
+         "ID": "",
+         "EXT_CODE": "",
+         "IN_DATE": "",
+         "RATE": "",
+         "DEPARTMENT_NAME": "",
+         "DOCTOR": {"DOCTOR"}
+        }
+
+
+{
+  "PERSON_ID": "",
+  "APPOINT_NAME": "",
+  "DEPARTMENT_NAME": "",
+  "ROWNUM": ""
+}
+
+
+{
+  "COUNT": ""
+  "ROWS" : [ "STAFF": {"STAFF"} ]
+}
+
+114 Получить пациентов (GET_PATIENTS)
+
+"PERSON": {
+           "ID": "",
+           "CODE": "",
+           "FAMILY": "",
+           "NAME": "",
+           "FULLNAME": "",
+           "PATRONYMIC": "",
+           "GENDER": "",
+           "BIRTHDAY": "",
+           "PHONE_MOBILE": "",
+           "PHONE_HOME": "",
+           "PHONE_ADD": "",
+           "EMAIL": ""
+          }
+
+
+{
+  "PERSON_ID": "",
+  "FAMILY": "",
+  "NAME": "",
+  "FULLNAME": "",  
+  "PATRONYMIC": "",
+  "PHONE_MOBILE": "",
+  "PHONE_HOME": "",
+  "PHONE_ADD": "",
+  "GENDER": "",
+  "CHART_ID": "",
+  "CHART_NUMBER": "",
+  "CHART_TYPE": "",
+  "INSTANCE_CODE": "",
+  "SEARCHSTRING": "",
+  "ROWNUM": "",
+  "ROWSTART": ""
+}
+
+SEARCHSTRING = поиск по ФИО+телефон
+
+{
+  "COUNT": ""
+  "ROWS" : [ "CHARTS": {"CHARTS"} ]
+}
+
+
+
+120 Список назначений пациента (GET_ORDERS)
+
+{
+  "CHART_ID": ""
+}
+
+{
+  "COUNT": ""
+  "ROWS" : [ "ORDERS": [{"ORDER"}] ]
+}
+
+121 Список заявок операций пациента (GET_OPERATIONS_REQUEST) (ранее Список планов операций пациента (GET_PLAN_OPARATIONS))
+
+{
+  "CHART_ID": ""
+}
+
+{
+  "COUNT": ""
+  "ROWS" : [ "SURGERIES": [{"SURGERY"}] ]
+}
+
+
+115 Создать пациента (CREATE_PATIENT)
+
+{
+  "FAMILY": "",
+  "NAME": "",
+  "FULLNAME": "",  
+  "PATRONYMIC": "",
+  "BIRTHDAY": "",
+  "GENDER": "",
+  "CHART_TYPE": "",
+  "PHONE_MOBILE": "",
+  "PHONE_HOME": "",
+  "PHONE_ADD": "",
+  "EMAIL": "",
+  "INSTANCE_CODE": ""
+}
+
+{
+    "CHART": {"CHART"}
+}
+
+
+
+116 Обновить данные пациента (UPDATE_PATIENT)
+
+{
+  "CHART_ID": "",
+  "FAMILY": "",
+  "NAME": "",
+  "FULLNAME": "",  
+  "PATRONYMIC": "",
+  "BIRTHDAY": "",
+  "GENDER": "",
+  "PHONE_MOBILE": "",
+  "PHONE_HOME": "",
+  "PHONE_ADD": "",
+  "EMAIL": "",
+  "INSTANCE_CODE": "",
+  "OUT_DATE": "",
+  "DIAGNOSIS": ""
+}
+
+{
+    "CHART": {"CHART"}
+}
+
+
+
+119 Создать назначение (CREATE_ORDER)
+Создать назначение для ИБ по заявленной услуге
+
+"ORDER":{
+         "ID": "",
+         "CREATOR_ID": "",
+         "CHART_ID": "",
+         "CRT_DATE": "",
+         "ORDER_DATETIME": "",
+         "SERVICE": "",
+         "SERVICE_COUNT": "",
+         "TALON": {"TALON"}
+        }
+
+{
+  "CHART_ID": "",
+  "SERVICE_ID": "",
+  "SERVICE_COUNT": "",
+  "DOCTOR_ID": "",
+  "CRT_DATE": "",
+}
+
+{
+  "CHART_ID": ""
+}
+
+
+
+122 Установить лечащего врача (SET_DOCTOR)
+
+{
+  "CHART_ID": "",
+  "DOCTOR_ID": "",
+  "CRT_DATE": ""
+}
+
+{
+ "MESSAGE": ""
+ "CHART":{}
+ }
+
+
+123 Установить дату выписки (SET_DISCHARGE_DATE)
+
+ {
+  "CHART_ID": "",
+  "OUT_DATE": ""
+}
+
+{
+ "MESSAGE": ""
+ "CHART":{}
+ }
+
+117 Удалить данные пациента (DELETE_PATIENT)
+
+{
+  "CHART_ID": ""
+}
+
+{
+  "MESSAGE": ""  -- что тут должно быть написано?
+}
+
+
+118 Удалить содержимое заявки (DELETE_CONTENTS)
+
+Если дата планируемой госпитализации в DEMANDS была перенесена, DEMANDS оповещает об этом МИС. Все брони в расписании а так же заявки на операцию, которые датируются позднее даты планируемой госпитализации освобождаются/удаляются. Например: пациент был запланирован на госпитализацию на 10.03.2020, на этот же день запланировано УЗИ, МРТ в расписании, а на 11.03.2020 запланирована операция в модуле «Управление оперблоком». Заявка была перенесена на 12.03.2020, следовательно все брони расписания и заявка на операцию были удалены.
+Отмена записи на прием и плана операций для медицинской карты
+
+{
+  "CHART_ID": ""
+}
+
+{
+  "MESSAGE": ""   -- что тут должно быть написано?
+}
+
