@@ -33,7 +33,7 @@ SEARCH_STRING - ??
 
 {
 "COUNT": ""
-"ROWS" :[ "AGREEMENT":{"AGREEMENT"} ]
+"ROWS" :[ {"AGREEMENT"} ]
 }
 
 
