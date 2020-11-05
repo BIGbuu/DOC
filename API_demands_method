@@ -22,7 +22,7 @@
   "CONTRAGENT_INN": "",
   "TYPE": "",
   "INSTANCE_CODE": "",
-  "SEARCH_STRING": "",
+  "SEARCH_STRING": "", -- (NAME + NUMBER + CONTRAGENT.NAME + CONTRAGENT.INN + TYPE)
   "COUNT": ""
 }
 
